@@ -22,6 +22,13 @@ namespace azure.Controllers
         {
             return string.Format("This page returns value you have put in URL:\nValue={0}",id.ToString());
         }
+        
+        // GET api/values/text
+        [HttpGet("{id}")]
+        public string Get(string param)
+        {
+            return string.Format("This page returns text value you have put in URL:\nValue={0}",param);
+        }
 
         // POST api/values
         [HttpPost]
