@@ -24,7 +24,7 @@ namespace azure.Controllers
         }
         
         // GET api/values/text
-        [HttpGet("{id}")]
+        [HttpGet("{param}")]
         public string Get(string param)
         {
             return string.Format("This page returns text value you have put in URL:\nValue={0}",param);
