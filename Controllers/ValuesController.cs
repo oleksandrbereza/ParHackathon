@@ -18,16 +18,24 @@ namespace azure.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(string id)
+        {
+        int num;
+        if (int.TryParse(id, out num))
+        {
+         return ProcessGetAsInt(num);
+        }
+        return ProcessGetAsString((string)id);
+        }
+
+        private string ProcessGetAsInt(int id)
         {
             return string.Format("This page returns value you have put in URL:\nValue={0}",id.ToString());
         }
         
-        // GET api/values/text
-        [HttpGet("{param}")]
-        public string Get(string param)
+        private string ProcessGetAsString(string id)
         {
-            return string.Format("This page returns text value you have put in URL:\nValue={0}",param);
+            return string.Format("This page returns text value you have put in URL:\nValue={0}",id);
         }
 
         // POST api/values

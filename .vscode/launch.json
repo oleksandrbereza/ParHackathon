@@ -11,6 +11,7 @@
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
             "console": "internalConsole"
+            //"requireExactSource": false
         },
         {
             "name": ".NET Core Launch (web)",
