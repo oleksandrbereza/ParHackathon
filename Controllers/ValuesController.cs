@@ -20,7 +20,7 @@ namespace azure.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return string.Format("value={0}",id.ToString());
+            return string.Format("This page returns value you have put in URL:\nValue={0}",id.ToString());
         }
 
         // POST api/values
